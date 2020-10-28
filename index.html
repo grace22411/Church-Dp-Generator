@@ -49,8 +49,8 @@
       $('#file-upload').change(function () {
         var reader = new FileReader();
         reader.onload = function (e) {
-          var preview = document.querySelector('.avatar');
-          preview.style.backgroundImage = `url(${e.target.result})`;
+          var preview = document.querySelector('.avat');
+          preview.src = `${e.target.result}`;
                    preview.style.maxWidth = '350px';
                    preview.style.maxHeight = '350px';
         }
@@ -87,7 +87,9 @@
     </section>
     <div class="section-two">
       <div class="sec">
-        <div class="avatar img-uploader" id="img-uploader"></div>
+        <div class="avatar img-uploader">
+          <img src="avatar.png" class="avat" id="img-uploader" alt="avatar image">
+        </div>
   
         <div class="avatar-info">
           <span contenteditable id="name-holder">

@@ -34,7 +34,7 @@ section {
   .section-two .sec {
     float:right;
     padding-top: 108px;
-    margin-right: 35px;;
+    margin-right: 34px;;
     width: 40%; }
   .section-two .avatar {
     height: 170px;
@@ -43,6 +43,13 @@ section {
     background-position-x: center;
     background-position-y: top;
     background-size: cover; }
+
+    .section-two .avatar img{
+      object-fit: cover;
+      height: 170px;
+    width: 170px;
+    border-radius:100%;
+    }
   .section-two span {
     display: block; 
     outline: none;
