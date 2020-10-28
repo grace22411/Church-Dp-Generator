@@ -19,6 +19,8 @@
 
   <!-- Popper JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js" integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA==" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.1.1/jspdf.umd.min.js" integrity="sha512-/Am09zlYshHgRizY3RkConGj4BsYIdb8mS7r5XAXw0rTiLgGSHzpUHTQBhinWR32C/KzLr749J1xuORzT2JnRA==" crossorigin="anonymous"></script>
 
   <!-- Latest compiled JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
@@ -58,25 +60,21 @@
     
 
       $('#export').click(function () {
-        // var scaleBy = 5;
-        // var w = 1000;
-        // var h = 1000;
+        
         var div = document.querySelector(".main-avatar");
-        // var canvas = document.createElement('canvas');
-        // div.width = w * scaleBy;
-        // div.height = h * scaleBy;
-        // div.style.width = w + 'px';
-        // div.style.height = h + 'px';
-        // html2canvas(div, {
-        // canvas:canvas,
-        // onrendered: function (canvas) {
-        //   console.log(canvas.toDataURL());
-        //   download(canvas.toDataURL(), "avatar.png", "image/png")
-        // }
-        html2canvas(div).then(function (canvas) {
-          console.log("hello",canvas.toDataURL("image/png"));
-          download(canvas.toDataURL(), "avatar.png", "image/png")
+        var options = {
+        quality: 0.95
+    };
+      
+    domtoimage.toJpeg(div, options).then(function (dataUrl) {
+          var doc = new jsPDF();
+        
+          download(dataUrl, "avatar.png", "image/png")
         });
+        // html2canvas(div).then(function (canvas) {
+        //   console.log("hello",canvas.toDataURL("image/png"));
+        //   download(canvas.toDataURL(), "avatar.png", "image/png")
+        // });
     });
 
         // html2canvas(document.querySelector(".main-avatar")).then(function (canvas) {
