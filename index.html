@@ -59,14 +59,15 @@
 
       $('#export').click(function () {
         var scaleBy = 5;
-        var w = 350;
-        var h = 350;
+        var w = 1000;
+        var h = 1000;
         var div = document.querySelector(".main-avatar");
         var canvas = document.createElement('canvas');
         div.width = w * scaleBy;
         div.height = h * scaleBy;
         div.style.width = w + 'px';
         div.style.height = h + 'px';
+        div.style.display = "none";
         // html2canvas(div, {
         // canvas:canvas,
         // onrendered: function (canvas) {
