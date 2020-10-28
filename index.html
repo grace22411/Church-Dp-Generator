@@ -58,7 +58,7 @@
       $('#export').click(function () {
 
         html2canvas(document.querySelector(".main-avatar")).then(function (canvas) {
-          console.log(canvas)
+          console.log("hello",canvas.toDataURL("image/png"));
           download(canvas.toDataURL(), "avatar.png", "image/png")
         });
       })
