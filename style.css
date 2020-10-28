@@ -11,7 +11,7 @@ section {
   width: 411px;
   margin: auto;
   height: 411px;
-  background-image: url(pictureDP.jpeg);
+  background-image: url(tester.jpg);
   background-size: contain; }
   section .sec {
     float:right;
@@ -22,7 +22,7 @@ section {
     height: 170px;
     width: 170px;
     border-radius:100%;
-    background-image: url(avatar.jpg);
+    background-image: url(avatar.png);
     background-position-x: center;
     background-position-y: top;
     background-size: cover; }
