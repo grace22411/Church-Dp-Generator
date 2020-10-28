@@ -67,20 +67,24 @@
         canvas.height = h * scaleBy;
         canvas.style.width = w + 'px';
         canvas.style.height = h + 'px';
-        html2canvas(div, {
-        canvas:canvas,
-        onrendered: function (canvas) {
-          console.log(canvas.toDataURL());
+        // html2canvas(div, {
+        // canvas:canvas,
+        // onrendered: function (canvas) {
+        //   console.log(canvas.toDataURL());
+        //   download(canvas.toDataURL(), "avatar.png", "image/png")
+        // }
+        html2canvas(div).then(function (canvas) {
+          console.log("hello",canvas.toDataURL("image/png"));
           download(canvas.toDataURL(), "avatar.png", "image/png")
-        }
+        });
     });
 
         // html2canvas(document.querySelector(".main-avatar")).then(function (canvas) {
         //   console.log("hello",canvas.toDataURL("image/png"));
         //   download(canvas.toDataURL(), "avatar.png", "image/png")
         // });
-      })
-    })
+      });
+    
   </script>
 </head>
 
