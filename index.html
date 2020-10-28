@@ -51,6 +51,7 @@
         reader.onload = function (e) {
           var preview = document.querySelector('.avat');
           preview.src = `${e.target.result}`;
+          preview.style.objectFit = "cover";
                    preview.style.maxWidth = '350px';
                    preview.style.maxHeight = '350px';
         }
