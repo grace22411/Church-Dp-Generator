@@ -11,7 +11,7 @@ section {
   width: 411px;
   margin: auto;
   height: 411px;
-  background-image: url(tester.jpg);
+  background-image: url(no.jpg);
   background-size: contain; }
   section .sec {
     float:right;
@@ -34,7 +34,7 @@ section {
     section span h2 {
       background-color: transparent;
       color: #fff;
-      padding-top: 0px;
+      padding-top: 12px;
       font-weight: 300;
       font-size: 17px; }
 
