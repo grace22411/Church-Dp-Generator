@@ -62,5 +62,15 @@ section {
       color:#DDC796;
       font-weight: 300;
       font-size: 17px; }
+      #export{
+        width:150px;
+        border:none;
+        background-color: #1D0600;
+        color:#fff;
+        border-radius: 3px;;
+        height:40px;
+        font-size:15px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
 
 /*# sourceMappingURL=style.css.map */
