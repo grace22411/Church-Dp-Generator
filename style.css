@@ -40,7 +40,6 @@ section {
     height: 170px;
     width: 170px;
     border-radius:100%;
-    background-image: url(avatar.png);
     background-position-x: center;
     background-position-y: top;
     background-size: cover; }
