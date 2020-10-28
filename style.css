@@ -4,26 +4,38 @@ body {
   width: 100%;
   height: 100%;
   padding: 0;
+  position: relative;
   font-family: 'Dancing Script', cursive;
   margin: 0; }
 
+  .container{
+    width:411px;
+    height:411px;
+    margin: auto;
+  }
+
 section {
   width: 411px;
-  margin: auto;
-  height: 411px;
-  background-image: url(no.jpg);
-  background-size: contain; }
+ 
+  position: absolute;
+  height: 411px;}
 
   section img{
     height: 411px;
     width:411px;
   }
-  section .sec {
+  .section-two{
+    width: 411px;
+    position: absolute;
+ 
+  height: 411px;
+  }
+  .section-two .sec {
     float:right;
     padding-top: 108px;
     margin-right: 35px;;
     width: 40%; }
-  section .avatar {
+  .section-two .avatar {
     height: 170px;
     width: 170px;
     border-radius:100%;
@@ -31,12 +43,12 @@ section {
     background-position-x: center;
     background-position-y: top;
     background-size: cover; }
-  section span {
+  .section-two span {
     display: block; 
     outline: none;
     text-align: center;
   }
-    section span h2 {
+    .section-two span h2 {
       background-color: transparent;
       color: #fff;
       padding-top: 12px;
