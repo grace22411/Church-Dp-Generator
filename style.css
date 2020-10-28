@@ -45,7 +45,7 @@ section {
     background-size: cover; }
 
     .section-two .avatar img{
-      object-fit: cover;
+      object-fit: contain !important;
       height: 170px;
     width: 170px;
     border-radius:100%;
