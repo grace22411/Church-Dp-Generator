@@ -13,6 +13,11 @@ section {
   height: 411px;
   background-image: url(no.jpg);
   background-size: contain; }
+
+  section img{
+    height: 411px;
+    width:411px;
+  }
   section .sec {
     float:right;
     padding-top: 108px;
