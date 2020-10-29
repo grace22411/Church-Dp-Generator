@@ -51,7 +51,7 @@
         reader.onload = function (e) {
           var preview = document.querySelector('.avat');
           preview.src = `${e.target.result}`;
-          preview.style.objectFit = "cover";
+         
                   //  preview.style.maxWidth = '350px';
                   //  preview.style.maxHeight = '350px';
         }
@@ -61,12 +61,20 @@
     
 
       $('#export').click(function () {
-        
         var div = document.querySelector(".container");
-        var options = {
-        quality: 0.95
-    };
-      
+        const img = document.getElementById('img-uploader');
+        const imgHeight = img.offsetHeight;
+        const imgWidth = img.offsetWidth;
+
+        const aspectRatio = imgWidth/imgHeight;
+
+        if(aspectRatio >= 1) {
+          img.style.height = 170 + 'px';
+          img.style.width = (170 * aspectRatio) + 'px';
+        } else {
+          img.style.width = 170 + 'px';
+          img.style.height = (170 / aspectRatio) + 'px';
+        }
   
         html2canvas(div).then(function (canvas) {
           console.log("hello",canvas.toDataURL("image/png"));
