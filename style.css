@@ -45,8 +45,9 @@ section {
     .section-two .avatar img{
       /* object-fit: cover; */
       display: block;
-      height: auto;
-    max-width: 100%;
+      object-fit: cover;
+      /* height: auto;
+    max-width: 100%; */
     }
   .section-two span {
     display: block; 
