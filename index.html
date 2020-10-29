@@ -62,22 +62,23 @@
 
       $('#export').click(function () {
         var div = document.querySelector(".container");
-        const img = document.getElementById('img-uploader');
-        const imgHeight = img.offsetHeight;
-        const imgWidth = img.offsetWidth;
-
-        const aspectRatio = imgWidth/imgHeight;
-
-        if(aspectRatio >= 1) {
-          img.style.height = 170 + 'px';
-          img.style.width = (170 * aspectRatio) + 'px';
-        } else {
-          img.style.width = 170 + 'px';
-          img.style.height = (170 / aspectRatio) + 'px';
-        }
+        
   
         html2canvas(div).then(function (canvas) {
           console.log("hello",canvas.toDataURL("image/png"));
+          const img = document.getElementById('img-uploader');
+          const imgHeight = img.offsetHeight;
+          const imgWidth = img.offsetWidth;
+
+          const aspectRatio = imgWidth/imgHeight;
+
+          if(aspectRatio >= 1) {
+            img.style.height = 170 + 'px';
+            img.style.width = (170 * aspectRatio) + 'px';
+          } else {
+            img.style.width = 170 + 'px';
+            img.style.height = (170 / aspectRatio) + 'px';
+          }
           download(canvas.toDataURL("image/png", 1), "avatar.png")
         });
     });
