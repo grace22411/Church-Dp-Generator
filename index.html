@@ -51,17 +51,7 @@
         reader.onload = function (e) {
           var preview = document.querySelector('.avat');
           preview.src = `${e.target.result}`;
-         
-                  //  preview.style.maxWidth = '350px';
-                  //  preview.style.maxHeight = '350px';
-        }
-        reader.readAsDataURL(this.files[0]);
-      })
-
-    
-
-      $('#export').click(function () {
-        const img = document.getElementById('img-uploader');
+          const img = document.getElementById('img-uploader');
           const imgHeight = img.offsetHeight;
           const imgWidth = img.offsetWidth;
 
@@ -74,6 +64,16 @@
             img.style.width = 170 + 'px';
             img.style.height = (170 / aspectRatio) + 'px';
           }
+                  //  preview.style.maxWidth = '350px';
+                  //  preview.style.maxHeight = '350px';
+        }
+        reader.readAsDataURL(this.files[0]);
+      })
+
+    
+
+      $('#export').click(function () {
+       
         var div = document.querySelector(".container");
         
         html2canvas(div).then(function (canvas) {
