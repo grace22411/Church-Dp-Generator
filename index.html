@@ -61,12 +61,7 @@
     
 
       $('#export').click(function () {
-        var div = document.querySelector(".container");
-        
-  
-        html2canvas(div).then(function (canvas) {
-          console.log("hello",canvas.toDataURL("image/png"));
-          const img = document.getElementById('img-uploader');
+        const img = document.getElementById('img-uploader');
           const imgHeight = img.offsetHeight;
           const imgWidth = img.offsetWidth;
 
@@ -79,6 +74,11 @@
             img.style.width = 170 + 'px';
             img.style.height = (170 / aspectRatio) + 'px';
           }
+        var div = document.querySelector(".container");
+        
+        html2canvas(div).then(function (canvas) {
+          console.log("hello",canvas.toDataURL("image/png"));
+          
           download(canvas.toDataURL("image/png", 1), "avatar.png")
         });
     });
